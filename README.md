@@ -1,3 +1,15 @@
+Este proyecto es un sistema de gestión de menú para un restaurante, diseñado para facilitar el flujo de pedidos entre los clientes, los chefs y el administrador. Incluye las siguientes funcionalidades:
+
+Gestión de Pedidos: Los clientes pueden realizar pedidos, los cuales son visibles en tiempo real para los chefs en una interfaz dedicada. Cada pedido muestra los productos solicitados, cantidades y precios.
+
+Temporizador de Preparación: Al iniciar un pedido, se activa un temporizador que registra el tiempo que el chef tarda en preparar los productos. Este tiempo se almacena y se puede analizar posteriormente para medir la eficiencia.
+
+Historial de Ventas: Una vez finalizados, los pedidos se registran en un historial de ventas accesible desde el panel de administración. Este historial muestra detalles de cada pedido, incluyendo los productos, cantidades, precios, tiempos de preparación y la fecha de venta.
+
+Interfaz de Administración: El administrador tiene acceso a un dashboard que permite revisar las ventas realizadas, incluyendo un resumen de los productos vendidos y sus tiempos de preparación. Esto ayuda a mantener un control sobre el rendimiento y facilita la toma de decisiones.
+
+El proyecto está desarrollado con Laravel en el backend y Vue.js en el frontend, y es ideal para mostrar en un portafolio, destacando habilidades en desarrollo full-stack y gestión de datos en tiempo real.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
