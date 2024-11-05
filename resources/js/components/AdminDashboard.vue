@@ -31,16 +31,30 @@
         </div>
       </div>
 
-      <!-- Listado de ventas -->
-      <div v-if="filteredSales.length" class="grid grid-cols-1 gap-6">
-        <div v-for="sale in filteredSales" :key="sale.id" class="border p-4 rounded-lg shadow-lg bg-white text-center">
-          <p><strong>Pedido ID:</strong> {{ sale.order_id }}</p>
-          <p>Nombre del Plato: {{ sale.product ? sale.product.name : 'Producto no disponible' }}</p>
-          <p><strong>Cantidad:</strong> {{ sale.quantity }}</p>
-          <p><strong>Precio:</strong> ${{ sale.price }}</p>
-          <p><strong>Tiempo de preparación:</strong> {{ sale.preparation_time }} segundos</p>
-          <p><strong>Fecha de venta:</strong> {{ sale.sale_date }}</p>
-        </div>
+      <!-- Tabla de ventas -->
+      <div v-if="filteredSales.length" class="overflow-x-auto">
+        <table class="table-auto w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border p-2 text-left">Pedido</th>
+              <th class="border p-2 text-left">Nombre del Plato</th>
+              <th class="border p-2 text-left">Cantidad</th>
+              <th class="border p-2 text-left">Precio</th>
+              <th class="border p-2 text-left">Tiempo de Preparación</th>
+              <th class="border p-2 text-left">Fecha de Venta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="sale in filteredSales" :key="sale.id" class="text-center">
+              <td class="border p-2">{{ sale.order_id }}</td>
+              <td class="border p-2">{{ sale.product ? sale.product.name : 'Producto no disponible' }}</td>
+              <td class="border p-2">{{ sale.quantity }}</td>
+              <td class="border p-2">${{ sale.price }}</td>
+              <td class="border p-2">{{ sale.preparation_time }} segundos</td>
+              <td class="border p-2">{{ sale.sale_date }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <p v-else class="text-center text-gray-500">No hay ventas registradas.</p>
     </div>
