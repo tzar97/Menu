@@ -110,7 +110,7 @@ export default {
       }
     },
     applyFilters() {
-      // Actualiza los filtros, lo cual hace que filteredSales se vuelva a calcular.
+      // Actualiza los filtross.
     }
   }
 };
